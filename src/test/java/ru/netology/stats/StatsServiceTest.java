@@ -6,9 +6,7 @@ import org.junit.jupiter.api.Test;
 public class StatsServiceTest {
 
     @Test
-    public void SumOfAllSales()
-
-    {
+    public void SumOfAllSales() {
         StatsService service = new StatsService();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -16,13 +14,11 @@ public class StatsServiceTest {
         int expectedSum = 180;
         int actualSum = service.calculateSumSale(sales);
 
-        Assertions.assertArrayEquals(expectedSum,actualSum);
+        Assertions.assertArrayEquals(expectedSum, actualSum);
     }
 
     @Test
-    public void AverageAmountSales ()
-
-    {
+    public void AverageAmountSales() {
         StatsService service = new StatsService();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -34,9 +30,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void numberMonthMaxSale ()
-
-    {
+    public void numberMonthMaxSale() {
         StatsService service = new StatsService();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -48,9 +42,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void numberMonthMinSale ()
-
-    {
+    public void numberMonthMinSale() {
         StatsService service = new StatsService();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -60,10 +52,9 @@ public class StatsServiceTest {
 
         Assertions.assertEquals(expectedNumMin, actualNumMin);
     }
-    @Test
-    public void LessAverageSale()
 
-    {
+    @Test
+    public void LessAverageSale() {
         StatsService service = new StatsService();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
@@ -75,9 +66,7 @@ public class StatsServiceTest {
     }
 
     @Test
-    public void MoreAverageSale()
-
-    {
+    public void MoreAverageSale() {
         StatsService service = new StatsService();
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
