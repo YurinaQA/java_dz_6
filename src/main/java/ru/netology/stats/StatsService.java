@@ -42,7 +42,7 @@ public class StatsService {
 
         int minAverage = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] <= AverageAmount(sales)) {
+            if (sales[i] <= averageAmount(sales)) {
                 minAverage++;
             }
         }
@@ -53,7 +53,7 @@ public class StatsService {
 
         int maxAverage = 0;
         for (int i = 0; i < sales.length; i++) {
-            if (sales[i] >= AverageAmount(sales)) {
+            if (sales[i] >= averageAmount(sales)) {
                 maxAverage++;
             }
         }
