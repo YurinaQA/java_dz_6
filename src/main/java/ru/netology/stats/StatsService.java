@@ -38,22 +38,24 @@ public class StatsService {
         return minMonth + 1; // месяца нумеруются с 1, а индексы массива с 0, нужно сдвинуть ответ на 1
     }
 
-    public int MonthMinAverage(long[] sales) {
+    public int monthMinAverage(long[] sales) {
 
         int minAverage = 0;
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] <= AverageAmount(sales)) {
+        for (long sale : sales) {
+            long averageSale = AverageAmount(sales);
+            if (sale < averageSale) {
                 minAverage++;
             }
         }
         return minAverage;
     }
 
-    public int MonthMaxAverage(long[] sales) {
+    public int monthMaxAverage(long[] sales) {
 
         int maxAverage = 0;
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] >= AverageAmount(sales)) {
+        for (long sale : sales) {
+            long averageSale = AverageAmount(sales);
+            if (sale >= averageSale) {
                 maxAverage++;
             }
         }

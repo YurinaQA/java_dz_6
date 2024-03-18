@@ -58,8 +58,8 @@ public class StatsServiceTest {
 
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
-        int expectedLessAver = 7;
-        int actualLessAver = service.MonthMinAverage(sales);
+        int expectedLessAver = 5;
+        int actualLessAver = service.monthMinAverage(sales);
 
         Assertions.assertEquals(expectedLessAver, actualLessAver);
     }
@@ -71,7 +71,7 @@ public class StatsServiceTest {
         long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
 
         int expectedMoreAver = 7;
-        int actualMoreAver = service.MonthMaxAverage(sales);
+        int actualMoreAver = service.monthMaxAverage(sales);
 
         Assertions.assertEquals(expectedMoreAver, actualMoreAver);
     }
