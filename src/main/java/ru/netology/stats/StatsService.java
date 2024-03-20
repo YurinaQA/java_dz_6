@@ -3,13 +3,14 @@ package ru.netology.stats;
 public class StatsService {
     public int calculateSumSale(long[] sales) {
         int sum = 0;
-        for (long i : sales) {
+        for (int i : sales) {
             sum += i;
         }
         return sum;
     }
 
-    public int AverageAmount(long[] sales) {
+    public int averageAmount(long[] sales) {
+
         return calculateSumSale(sales) / sales.length;
     }
 
@@ -41,34 +42,34 @@ public class StatsService {
     public int monthMinAverage(long[] sales) {
 
         int minAverage = 0;
-<<<<<<< HEAD
+
         for (long sale : sales) {
-            long averageSale = AverageAmount(sales);
+            long averageSale = averageAmount(sales);
             if (sale < averageSale) {
-=======
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] <= averageAmount(sales)) {
->>>>>>> 0837ec9022f82eaf57aeb2c4d8d9ef2b4ff87bc5
-                minAverage++;
-            }
-        }
-        return minAverage;
-    }
 
-    public int monthMaxAverage(long[] sales) {
+                for (int i = 0; i < sales.length; i++) {
+                    if (sales[i] <= averageAmount(sales)) {
 
-        int maxAverage = 0;
-<<<<<<< HEAD
-        for (long sale : sales) {
-            long averageSale = AverageAmount(sales);
-            if (sale >= averageSale) {
-=======
-        for (int i = 0; i < sales.length; i++) {
-            if (sales[i] >= averageAmount(sales)) {
->>>>>>> 0837ec9022f82eaf57aeb2c4d8d9ef2b4ff87bc5
-                maxAverage++;
+                        minAverage++;
+                    }
+                }
+                return minAverage;
             }
-        }
-        return maxAverage;
-    }
-}
+
+
+            public int monthMaxAverage(long[] sales) {
+
+                int maxAverage = 0;
+
+                for (long sale : sales) {
+                    long averageSale = averageAmount(sales);
+                    if (sale >= averageSale) {
+
+                        for (int i = 0; i < sales.length; i++) {
+                            if (sales[i] >= averageAmount(sales)) {
+                                maxAverage++;
+                            }
+                        }
+                        return maxAverage;
+                    }
+                }
